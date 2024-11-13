@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <ul>
+      <% for (let i = 0; i < result.length; i++) { %>
+        <li>
+          <%= result[i].name %> (<%= result[i]._id %>)
+        </li>
+      <% } %>
+    </ul>
+
+    <h2>Cadastro</h2>
+    <form action="/save" method="POST">
+      <p>
+        <label>Nome:
+          <input type="text" name="name" />
+        </label>
+      </p>
+      <p>
+        <label>Idade:
+          <input type="number" name="age" />
+        </label>
+      </p>
+      <p>
+        <input type="submit" value="Salvar" />
+      </p>
+    </form>
+
+    <h2>Exclusão</h2>
+    <form action="delete" method="POST">
+      <P>
+        <label>ID:
+          <input type="text" name="id" />        
+        </label>
+      </P>
+      <p>
+        <input type="submit" name="Excluir" />        
+      </p>
+    </form>
+
+    <h2>Edição</h2>
+    <form action="edit" method="POST">
+      <P>
+        <label>ID:
+          <input type="text" name="id" />        
+        </label>
+      </P>
+      <p>
+        <label>
+          <input type="text" name="name"/>
+        </label>
+      </p>
+      <p>
+        <input type="submit" name="Editar" />        
+      </p>
+    </form>
+
+  </body>
+</html>
