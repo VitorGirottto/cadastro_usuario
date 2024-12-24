@@ -23,7 +23,7 @@ MongoDB: Este projeto requer uma instância do MongoDB. Você pode usar um banco
 
 ## 1. Clone este repositório:
 
-`git clone https://github.com/seu-usuario/mongodb-express.git`
+`git clone https://github.com/itorGirottto/cadastro_usuario`
 
 ## 2. Acesse o diretório do projeto:
 
